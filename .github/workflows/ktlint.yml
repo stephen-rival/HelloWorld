@@ -1,0 +1,12 @@
+name: ktlint
+
+on: [pull_request]
+
+jobs:
+  ktlint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v1
+      - name: Run ktlint Gradle task
+        run: ./gradlew ktlintCheck
