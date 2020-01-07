@@ -1,0 +1,9 @@
+name: ktlinter
+on: [pull_request]
+jobs:
+  ktlint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: Raul6469/android-gradle-action@master
+      with:
+        arguments: lint
